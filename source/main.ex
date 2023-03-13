@@ -21,7 +21,7 @@ puts(fn, "--with trace\n--trace(1)\n")
 puts(fn, "puts(1, \"Hi world.\\n\")\n")
 printf(fn, "integer fn = open(\"%s\", \"w\")\n", {FILENAME_DATA_E})
 puts(fn, "puts(fn, \"--with trace\\n--trace(1)\\n\")\n")
-printf(fn, "printf(fn, \"public object data = %%d\\n\", %d + %d)\n", {2, 2})
+printf(fn, "printf(fn, \"public object data = %%d\\n\", {%d + %d})\n", {2, 2})
 puts(fn, "close(fn)\n")
 close(fn)
 
