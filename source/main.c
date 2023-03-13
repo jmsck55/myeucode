@@ -26,7 +26,7 @@ int main()
     fputs("puts(1, \"Hi world.\\n\")\n",pFile);
     fprintf(pFile,"integer fn = open(\"%s\", \"w\")\n", FILENAME_DATA_E);
     fputs("puts(fn, \"--with trace\\n--trace(1)\\n\")\n",pFile);
-    fprintf(pFile,"printf(fn, \"public object data = %%d\\n\", %d + %d)\n", 2, 2);
+    fprintf(pFile,"printf(fn, \"public object data = %%d\\n\", {%d + %d})\n", 2, 2);
     fputs("close(fn)\n",pFile);
     fclose(pFile);
 
