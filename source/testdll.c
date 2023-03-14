@@ -24,7 +24,7 @@ int main()
     }
 
     print("--");
-    printWithTrace();
+    printWith("trace");
     print("--");
     printTrace(1);
 
