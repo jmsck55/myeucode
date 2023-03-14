@@ -14,8 +14,6 @@ int main()
     int error_code;
     FILE * pFile;
 
-    t0 = clock();
-
     pFile = fopen(FILENAME_EVAL_EX, "w");
     if (pFile == NULL)
     {
@@ -29,6 +27,8 @@ int main()
     fprintf(pFile,"printf(fn, \"public object data = %%d\\n\", {%d + %d})\n", 2, 2);
     fputs("close(fn)\n",pFile);
     fclose(pFile);
+
+    t0 = clock();
 
     error_code = system("eui " FILENAME_EVAL_EX);
 

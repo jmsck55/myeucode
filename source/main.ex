@@ -10,7 +10,7 @@ constant FILENAME_DATA_E = "data.e"
 
 integer fn
 
-object t, t0 = time()
+object t, t0
 
 fn = open(FILENAME_EVAL_EX, "w")
 if fn = -1 then
@@ -27,11 +27,14 @@ close(fn)
 
 --trace(1)
 atom error_code
+
+t0 = time()
+
 error_code = system_exec("eui " & FILENAME_EVAL_EX, 2)
-? error_code
 
 t = time() - t0
 
+? error_code
 puts(1, "execution time in seconds:\n")
 ? t
 
