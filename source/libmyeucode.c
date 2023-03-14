@@ -184,9 +184,9 @@ void printReturn(const char * retval)
     fprintf(pFile,"return %s\n",retval);
 }
 
-void printNamespace(const char * namespace)
+void printNamespace(const char * name_space)
 {
-    fprintf(pFile,"namespace %s\n", namespace);
+    fprintf(pFile,"namespace %s\n", name_space);
 }
 
 void printInclude(const char * path)
@@ -194,9 +194,9 @@ void printInclude(const char * path)
     fprintf(pFile,"include %s\n", path);
 }
 
-void printIncludeAs(const char * path, const char * namespace)
+void printIncludeAs(const char * path, const char * name_space)
 {
-    fprintf(pFile,"include %s as %s\n", path, namespace);
+    fprintf(pFile,"include %s as %s\n", path, name_space);
 }
 
 // open() and close() file functions

@@ -66,9 +66,9 @@ extern void printEndFunction();
 extern void printEndProcedure();
 extern void printReturn(const char * retval);
 
-extern void printNamespace(const char * namespace);
+extern void printNamespace(const char * name_space);
 extern void printInclude(const char * path);
-extern void printIncludeAs(const char * path, const char * namespace);
+extern void printIncludeAs(const char * path, const char * name_space);
 
 // open() and close() file functions
 
